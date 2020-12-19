@@ -6,20 +6,24 @@
 
 body {
     background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: "Poppins", sans-serif;
     margin: 0;
+    min-height: 100vh;
 }
 
 h1 {
     color: rgb(148, 197, 219);
-    font-size: 8rem;
+    font-size: 4rem;
     text-align: center;
     opacity: 0.4;
 }
 
 form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
     max-width: 100%;
     width: 400px;
 }
@@ -33,7 +37,7 @@ form {
 }
 
 .input ::placeholder {
-    columns: #b5b5b5;
+    columns: #d5d5d5;
 }
 
 .todos {
@@ -51,5 +55,11 @@ form {
 }
 
 .todos li.completed {
+    color: #b5b5b5;
     text-decoration: line-through;
+}
+
+small {
+    color: #d5d5d5;
+    margin-top: 3rem;
 }

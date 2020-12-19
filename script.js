@@ -5,18 +5,24 @@ const todos = document.getElementById("todos");
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const todoText = input.nodeValue;
+    const todoText = input.value;
 
-    if(todoText) {
+    if (todoText) {
         const todoEl = document.createElement("li");
         todoEl.innerText = todoText;
         todos.appendChild(todoEl);
 
+        todoEl.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+
+            todoEl.remove();
+        });
+
         todoEl.addEventListener('click', () => {
             todoEl.classList.toggle("completed");
-        })
+        });
 
         input.value = "";
     }
 
-})
+});
